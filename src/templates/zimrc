@@ -86,4 +86,13 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 # Xcode
 #
 alias kill-dd='rm -rf ~/Library/Developer/Xcode/DerivedData'
+
+#
+# Extra modules
+#
+zmodule ssh
+zstyle ':zim:ssh' ids 'id_rsa'
+
+zmodule homebrew
+
 # }}} End configuration added by Zim install
