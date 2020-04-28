@@ -177,60 +177,7 @@ zmodule zsh-users/zsh-syntax-highlighting
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 
-#
-# More custom configurations
-#
-
-# Editors
-
-alias em='emacsclient -n'
-alias et='emacsclient -t'
-alias ec='emacsclient -nc'
-alias ek=\"emacsclient -e '(kill-emacs)'\"
-alias er=\"ek;ed;ec\"
-
-export EDITOR=\"emacsclient -nc\"
-export EDITOR=\"emacsclient -n\"
-export ALTERNATE_EDITOR=''
-
-# Golang
-
-export GOPATH=\$HOME/src/go
-export GOROOT='/usr/local/opt/go/libexec/'
-export PATH=\$PATH:\$GOPATH/bin
-export PATH=\$PATH:\$GOROOT/bin
-
-# Navigation
-
-alias dd='dirs -v'
-for index ({1..9}) alias \"\$index\"=\"cd +\${index}\"; unset index
-
-#
-# the fuck
-#
-eval \$(thefuck --alias)
-
-#
-# rbenv
-#
-eval \"\$(rbenv init -)\"
-
-#
-# git
-#
-alias gdt='git difftool'
-alias glog=\"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit\"
-
-#
-# Xcode
-#
-alias kill-dd='rm -rf ~/Library/Developer/Xcode/DerivedData'
-
-#
-# Extra modules
-#
 zmodule ssh
-zstyle ':zim:ssh' ids 'id_rsa'
 
 zmodule homebrew
 
@@ -346,6 +293,11 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #typeset -A ZSH_HIGHLIGHT_STYLES
 #ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
 
+# ssh
+zstyle ':zim:ssh' ids 'id_rsa'
+
+
+
 # ------------------
 # Initialize modules
 # ------------------
@@ -379,6 +331,55 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+
+# More custom configurations
+#
+
+# Editors
+
+alias em='emacsclient -n'
+alias et='emacsclient -t'
+alias ec='emacsclient -nc'
+alias ek=\"emacsclient -e '(kill-emacs)'\"
+alias er=\"ek;ed;ec\"
+
+export EDITOR=\"emacsclient -nc\"
+export EDITOR=\"emacsclient -n\"
+export ALTERNATE_EDITOR=''
+
+# Golang
+
+export GOPATH=\$HOME/src/go
+export GOROOT='/usr/local/opt/go/libexec/'
+export PATH=\$PATH:\$GOPATH/bin
+export PATH=\$PATH:\$GOROOT/bin
+
+# Navigation
+
+alias dd='dirs -v'
+for index ({1..9}) alias \"\$index\"=\"cd +\${index}\"; unset index
+
+#
+# the fuck
+#
+eval \$(thefuck --alias)
+
+#
+# rbenv
+#
+eval \"\$(rbenv init -)\"
+
+#
+# git
+#
+alias gdt='git difftool'
+alias glog=\"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit\"
+
+#
+# Xcode
+#
+alias kill-dd='rm -rf ~/Library/Developer/Xcode/DerivedData'
 # }}} End configuration added by Zim install
 "
 for ZTEMPLATE in ${(k)ZTEMPLATES}; do
