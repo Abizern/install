@@ -5,4 +5,7 @@
 
 # Define Zim location
 : ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
+
+# Add the cask installation to the path
+export PATH=$HOME/.cask/bin:$PATH
 # }}} End configuration added by Zim install

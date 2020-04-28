@@ -194,6 +194,9 @@ ZTEMPLATES[zshenv]="# Start configuration added by Zim install {{{
 
 # Define Zim location
 : \${ZIM_HOME=${ZIM_HOME_STR}}
+
+# Add the cask installation to the path
+export PATH=\$HOME/.cask/bin:\$PATH
 # }}} End configuration added by Zim install
 "
 ZTEMPLATES[zshrc]="# Start configuration added by Zim install {{{
