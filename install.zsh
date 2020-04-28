@@ -338,6 +338,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Editors
 
+alias ed='emacs --daemon'
 alias em='emacsclient -n'
 alias et='emacsclient -t'
 alias ec='emacsclient -nc'
