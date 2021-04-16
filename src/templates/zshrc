@@ -166,6 +166,12 @@ eval $(thefuck --alias)
 eval "$(rbenv init -)"
 
 #
+# chruby
+#
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+#
 # git
 #
 alias gdt='git difftool'
