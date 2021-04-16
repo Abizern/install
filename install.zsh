@@ -372,10 +372,16 @@ eval \$(thefuck --alias)
 eval \"\$(rbenv init -)\"
 
 #
+# chruby
+#
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+#
 # git
 #
 alias gdt='git difftool'
-alias glog=\"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit\"
+alias glog=\"git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit\"
 
 #
 # Xcode
