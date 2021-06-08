@@ -161,11 +161,6 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 eval $(thefuck --alias)
 
 #
-# rbenv
-#
-eval "$(rbenv init -)"
-
-#
 # chruby
 #
 source /usr/local/opt/chruby/share/chruby/chruby.sh
